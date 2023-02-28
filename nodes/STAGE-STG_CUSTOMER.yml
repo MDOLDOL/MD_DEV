@@ -1,0 +1,172 @@
+steps:
+  STG_CUSTOMER-75:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: Customer data as defined by TPC-H
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 612
+              stepCounter: "75"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: C_CUSTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 595
+                    stepCounter: "73"
+                transform: ""
+          - columnReference:
+              columnCounter: 613
+              stepCounter: "75"
+            dataType: VARCHAR(25)
+            description: ""
+            name: C_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 596
+                    stepCounter: "73"
+                transform: ""
+          - columnReference:
+              columnCounter: 614
+              stepCounter: "75"
+            dataType: VARCHAR(40)
+            description: ""
+            name: C_ADDRESS
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 597
+                    stepCounter: "73"
+                transform: ""
+          - columnReference:
+              columnCounter: 615
+              stepCounter: "75"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: C_NATIONKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 598
+                    stepCounter: "73"
+                transform: ""
+          - columnReference:
+              columnCounter: 616
+              stepCounter: "75"
+            dataType: VARCHAR(15)
+            description: ""
+            name: C_PHONE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 599
+                    stepCounter: "73"
+                transform: ""
+          - columnReference:
+              columnCounter: 617
+              stepCounter: "75"
+            dataType: NUMBER(12,2)
+            description: ""
+            name: C_ACCTBAL
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 600
+                    stepCounter: "73"
+                transform: ""
+          - columnReference:
+              columnCounter: 618
+              stepCounter: "75"
+            dataType: VARCHAR(10)
+            description: ""
+            name: C_MKTSEGMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 601
+                    stepCounter: "73"
+                transform: ""
+          - columnReference:
+              columnCounter: 619
+              stepCounter: "75"
+            dataType: VARCHAR(117)
+            description: ""
+            name: C_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 602
+                    stepCounter: "73"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 620
+              stepCounter: "75"
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 612
+                stepCounter: "75"
+              - columnCounter: 613
+                stepCounter: "75"
+              - columnCounter: 614
+                stepCounter: "75"
+              - columnCounter: 615
+                stepCounter: "75"
+              - columnCounter: 616
+                stepCounter: "75"
+              - columnCounter: 617
+                stepCounter: "75"
+              - columnCounter: 618
+                stepCounter: "75"
+              - columnCounter: 619
+                stepCounter: "75"
+            name: ""
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              CUSTOMER: "73"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SRC
+                nodeName: CUSTOMER
+            join:
+              joinCondition: FROM {{ ref('SRC', 'CUSTOMER') }} "CUSTOMER"
+            name: STG_CUSTOMER
+            noLinkRefs: []
+      name: STG_CUSTOMER
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "75"
