@@ -1,0 +1,295 @@
+steps:
+  STG_ORDERS-83:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: Orders data as defined by TPC-H
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: BV
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 705
+              stepCounter: "83"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: O_ORDERKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 603
+                    stepCounter: "74"
+                transform: ""
+          - columnReference:
+              columnCounter: 706
+              stepCounter: "83"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: O_CUSTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 604
+                    stepCounter: "74"
+                transform: ""
+          - columnReference:
+              columnCounter: 707
+              stepCounter: "83"
+            dataType: VARCHAR(1)
+            description: ""
+            name: O_ORDERSTATUS
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 605
+                    stepCounter: "74"
+                transform: ""
+          - columnReference:
+              columnCounter: 708
+              stepCounter: "83"
+            dataType: NUMBER(12,2)
+            description: ""
+            name: O_TOTALPRICE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 606
+                    stepCounter: "74"
+                transform: ""
+          - columnReference:
+              columnCounter: 709
+              stepCounter: "83"
+            dataType: DATE
+            description: ""
+            name: O_ORDERDATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 607
+                    stepCounter: "74"
+                transform: ""
+          - columnReference:
+              columnCounter: 710
+              stepCounter: "83"
+            dataType: VARCHAR(15)
+            description: ""
+            name: O_ORDERPRIORITY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 608
+                    stepCounter: "74"
+                transform: ""
+          - columnReference:
+              columnCounter: 711
+              stepCounter: "83"
+            dataType: VARCHAR(15)
+            description: ""
+            name: O_CLERK
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 609
+                    stepCounter: "74"
+                transform: ""
+          - columnReference:
+              columnCounter: 712
+              stepCounter: "83"
+            dataType: NUMBER(38,0)
+            description: ""
+            name: O_SHIPPRIORITY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 610
+                    stepCounter: "74"
+                transform: ""
+          - columnReference:
+              columnCounter: 713
+              stepCounter: "83"
+            dataType: VARCHAR(79)
+            description: ""
+            name: O_COMMENT
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 611
+                    stepCounter: "74"
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 715
+              stepCounter: "83"
+            config: {}
+            dataType: TIMESTAMP_LTZ
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0
+                    stepCounter: "0"
+                transform: CURRENT_DATE()
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 716
+              stepCounter: "83"
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: RSCR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0
+                    stepCounter: "0"
+                transform: "'ORDER'"
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 714
+              stepCounter: "83"
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 705
+                stepCounter: "83"
+            name: SHA1_HUB_ORDERS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 717
+              stepCounter: "83"
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 706
+                stepCounter: "83"
+            name: SHA1_HUB_CUSTOMER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 718
+              stepCounter: "83"
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 705
+                stepCounter: "83"
+              - columnCounter: 706
+                stepCounter: "83"
+            name: SHA1_LNK_CUSTOMER_ORDER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 719
+              stepCounter: "83"
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 705
+                stepCounter: "83"
+              - columnCounter: 706
+                stepCounter: "83"
+              - columnCounter: 707
+                stepCounter: "83"
+              - columnCounter: 708
+                stepCounter: "83"
+              - columnCounter: 709
+                stepCounter: "83"
+              - columnCounter: 710
+                stepCounter: "83"
+              - columnCounter: 711
+                stepCounter: "83"
+              - columnCounter: 712
+                stepCounter: "83"
+              - columnCounter: 713
+                stepCounter: "83"
+              - columnCounter: 715
+                stepCounter: "83"
+              - columnCounter: 716
+                stepCounter: "83"
+            name: ORDER_HASH_DIFF
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SRC
+                nodeName: ORDERS
+            join:
+              joinCondition: FROM {{ ref('SRC', 'ORDERS') }} "ORDERS"
+            name: STG_ORDERS
+            noLinkRefs: []
+      name: STG_ORDERS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "83"

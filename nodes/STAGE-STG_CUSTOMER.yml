@@ -120,7 +120,28 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 620
+              columnCounter: 702
+              stepCounter: "75"
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: RSCR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0
+                    stepCounter: "0"
+                transform: "'CUST'"
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 703
               stepCounter: "75"
             config: {}
             dataType: STRING
@@ -131,6 +152,25 @@ steps:
             hashedColumns:
               - columnCounter: 612
                 stepCounter: "75"
+            name: SHA1_HUB_CUSTOMER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 704
+              stepCounter: "75"
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
               - columnCounter: 613
                 stepCounter: "75"
               - columnCounter: 614
@@ -145,11 +185,32 @@ steps:
                 stepCounter: "75"
               - columnCounter: 619
                 stepCounter: "75"
-            name: ""
+            name: CUSTOMER_HASHDIFF
             nullable: true
             sourceColumnReferences:
               - columnReferences: []
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 736
+              stepCounter: "75"
+            config: {}
+            dataType: TIMESTAMP_LTZ
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0
+                    stepCounter: "0"
+                transform: CURRENT_DATE()
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
