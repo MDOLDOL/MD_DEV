@@ -1,0 +1,96 @@
+steps:
+  HUB_CUSTOMER-90:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: Customer data as defined by TPC-H
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: RAW
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 796
+              stepCounter: "90"
+            config:
+              isHubHash: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SHA1_HUB_CUSTOMER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 703
+                    stepCounter: "75"
+                transform: ""
+          - columnReference:
+              columnCounter: 787
+              stepCounter: "90"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_CUSTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 612
+                    stepCounter: "75"
+                transform: ""
+          - columnReference:
+              columnCounter: 795
+              stepCounter: "90"
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: RSCR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 702
+                    stepCounter: "75"
+                transform: ""
+          - columnReference:
+              columnCounter: 798
+              stepCounter: "90"
+            dataType: TIMESTAMP_LTZ
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LDTS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 736
+                    stepCounter: "75"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: STG_CUSTOMER
+            join:
+              joinCondition: FROM {{ ref('STAGE', 'STG_CUSTOMER') }} "STG_CUSTOMER"
+            name: HUB_CUSTOMER
+            noLinkRefs: []
+      name: HUB_CUSTOMER
+      overrideSQL: false
+      schema: ""
+      sqlType: "13"
+      type: sql
+    stepCounter: "90"

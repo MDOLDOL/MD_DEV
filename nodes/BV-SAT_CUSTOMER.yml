@@ -1,7 +1,10 @@
 steps:
-  NEW_CUSTOMER-90:
+  SAT_CUSTOMER-94:
     operation:
-      config: {}
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
       database: ""
       dependencies: []
       deployEnabled: true
@@ -15,134 +18,10 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 787
-              stepCounter: "90"
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: C_CUSTKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 612
-                    stepCounter: "75"
-                transform: ""
-          - columnReference:
-              columnCounter: 788
-              stepCounter: "90"
-            dataType: VARCHAR(25)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: C_NAME
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 613
-                    stepCounter: "75"
-                transform: ""
-          - columnReference:
-              columnCounter: 789
-              stepCounter: "90"
-            dataType: VARCHAR(40)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: C_ADDRESS
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 614
-                    stepCounter: "75"
-                transform: ""
-          - columnReference:
-              columnCounter: 790
-              stepCounter: "90"
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: C_NATIONKEY
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 615
-                    stepCounter: "75"
-                transform: ""
-          - columnReference:
-              columnCounter: 791
-              stepCounter: "90"
-            dataType: VARCHAR(15)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: C_PHONE
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 616
-                    stepCounter: "75"
-                transform: ""
-          - columnReference:
-              columnCounter: 792
-              stepCounter: "90"
-            dataType: NUMBER(12,2)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: C_ACCTBAL
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 617
-                    stepCounter: "75"
-                transform: ""
-          - columnReference:
-              columnCounter: 793
-              stepCounter: "90"
-            dataType: VARCHAR(10)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: C_MKTSEGMENT
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 618
-                    stepCounter: "75"
-                transform: ""
-          - columnReference:
-              columnCounter: 794
-              stepCounter: "90"
-            dataType: VARCHAR(117)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: C_COMMENT
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 619
-                    stepCounter: "75"
-                transform: ""
-          - columnReference:
-              columnCounter: 795
-              stepCounter: "90"
-            dataType: STRING
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: RSCR
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 702
-                    stepCounter: "75"
-                transform: ""
-          - columnReference:
-              columnCounter: 796
-              stepCounter: "90"
+              columnCounter: 842
+              stepCounter: "94"
+            config:
+              isHubHash: true
             dataType: STRING
             description: ""
             hashColumns: []
@@ -155,8 +34,10 @@ steps:
                     stepCounter: "75"
                 transform: ""
           - columnReference:
-              columnCounter: 797
-              stepCounter: "90"
+              columnCounter: 843
+              stepCounter: "94"
+            config:
+              isChangeHash: true
             dataType: STRING
             description: ""
             hashColumns: []
@@ -169,8 +50,136 @@ steps:
                     stepCounter: "75"
                 transform: ""
           - columnReference:
-              columnCounter: 798
-              stepCounter: "90"
+              columnCounter: 833
+              stepCounter: "94"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_CUSTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 612
+                    stepCounter: "75"
+                transform: ""
+          - columnReference:
+              columnCounter: 834
+              stepCounter: "94"
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 613
+                    stepCounter: "75"
+                transform: ""
+          - columnReference:
+              columnCounter: 835
+              stepCounter: "94"
+            dataType: VARCHAR(40)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_ADDRESS
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 614
+                    stepCounter: "75"
+                transform: ""
+          - columnReference:
+              columnCounter: 836
+              stepCounter: "94"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_NATIONKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 615
+                    stepCounter: "75"
+                transform: ""
+          - columnReference:
+              columnCounter: 837
+              stepCounter: "94"
+            dataType: VARCHAR(15)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_PHONE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 616
+                    stepCounter: "75"
+                transform: ""
+          - columnReference:
+              columnCounter: 838
+              stepCounter: "94"
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_ACCTBAL
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 617
+                    stepCounter: "75"
+                transform: ""
+          - columnReference:
+              columnCounter: 839
+              stepCounter: "94"
+            dataType: VARCHAR(10)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_MKTSEGMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 618
+                    stepCounter: "75"
+                transform: ""
+          - columnReference:
+              columnCounter: 840
+              stepCounter: "94"
+            dataType: VARCHAR(117)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 619
+                    stepCounter: "75"
+                transform: ""
+          - columnReference:
+              columnCounter: 841
+              stepCounter: "94"
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: RSCR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 702
+                    stepCounter: "75"
+                transform: ""
+          - columnReference:
+              columnCounter: 844
+              stepCounter: "94"
+            config:
+              isSystemCreateDate: true
             dataType: TIMESTAMP_LTZ
             description: ""
             hashColumns: []
@@ -192,11 +201,11 @@ steps:
                 nodeName: STG_CUSTOMER
             join:
               joinCondition: FROM {{ ref('STAGE', 'STG_CUSTOMER') }} "STG_CUSTOMER"
-            name: NEW_CUSTOMER
+            name: SAT_CUSTOMER
             noLinkRefs: []
-      name: NEW_CUSTOMER
+      name: SAT_CUSTOMER
       overrideSQL: false
       schema: ""
-      sqlType: "14"
+      sqlType: "15"
       type: sql
-    stepCounter: "90"
+    stepCounter: "94"
